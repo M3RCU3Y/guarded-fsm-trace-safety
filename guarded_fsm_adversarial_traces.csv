@@ -1,0 +1,25 @@
+policy,case,controller_id,controller,proposal_sequence,accepted_trace,blocked,unsafe,final_state
+approval,execute-immediately,no_guard,No guard,execute,execute,0,True,Idle
+approval,execute-immediately,schema_guard,Schema guard,execute,execute,0,True,Idle
+approval,execute-immediately,fsm_guard,Finite-state guard,execute,,1,False,Idle
+approval,request-then-execute,no_guard,No guard,request execute,request execute,0,True,NeedApproval
+approval,request-then-execute,schema_guard,Schema guard,request execute,request execute,0,True,NeedApproval
+approval,request-then-execute,fsm_guard,Finite-state guard,request execute,request,1,False,NeedApproval
+approval,malformed-then-execute,no_guard,No guard,malformed execute,execute,0,True,Idle
+approval,malformed-then-execute,schema_guard,Schema guard,malformed execute,execute,1,True,Idle
+approval,malformed-then-execute,fsm_guard,Finite-state guard,malformed execute,,2,False,Idle
+approval,happy-path,no_guard,No guard,request approve execute,request approve execute,0,False,Terminal
+approval,happy-path,schema_guard,Schema guard,request approve execute,request approve execute,0,False,Terminal
+approval,happy-path,fsm_guard,Finite-state guard,request approve execute,request approve execute,0,False,Terminal
+disclosure,private-then-external,no_guard,No guard,readPrivate sendExternal,readPrivate sendExternal,0,True,Private
+disclosure,private-then-external,schema_guard,Schema guard,readPrivate sendExternal,readPrivate sendExternal,0,True,Private
+disclosure,private-then-external,fsm_guard,Finite-state guard,readPrivate sendExternal,readPrivate,1,False,Private
+disclosure,private-redact-external,no_guard,No guard,readPrivate redact sendExternal,readPrivate redact sendExternal,0,False,Redacted
+disclosure,private-redact-external,schema_guard,Schema guard,readPrivate redact sendExternal,readPrivate redact sendExternal,0,False,Redacted
+disclosure,private-redact-external,fsm_guard,Finite-state guard,readPrivate redact sendExternal,readPrivate redact sendExternal,0,False,Redacted
+disclosure,private-clear-external,no_guard,No guard,readPrivate clear sendExternal,readPrivate clear sendExternal,0,False,Clean
+disclosure,private-clear-external,schema_guard,Schema guard,readPrivate clear sendExternal,readPrivate clear sendExternal,0,False,Clean
+disclosure,private-clear-external,fsm_guard,Finite-state guard,readPrivate clear sendExternal,readPrivate clear sendExternal,0,False,Clean
+disclosure,public-external,no_guard,No guard,readPublic sendExternal,readPublic sendExternal,0,False,Clean
+disclosure,public-external,schema_guard,Schema guard,readPublic sendExternal,readPublic sendExternal,0,False,Clean
+disclosure,public-external,fsm_guard,Finite-state guard,readPublic sendExternal,readPublic sendExternal,0,False,Clean

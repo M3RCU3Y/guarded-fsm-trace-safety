@@ -1,0 +1,42 @@
+{
+  "seed": 20260509,
+  "episodes": 5000,
+  "max_steps": 14,
+  "alphas": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "approval_enumeration_depth": 8,
+  "disclosure_enumeration_depth": 6,
+  "benchmark_iterations": 250000,
+  "python": "3.12.5",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "generated_files": [
+    "guarded_fsm_sim_results.csv",
+    "guarded_fsm_sim_results_fsm_guard.csv",
+    "guarded_fsm_sim_results_no_guard.csv",
+    "guarded_fsm_sim_results_schema_guard.csv",
+    "guarded_fsm_disclosure_results.csv",
+    "guarded_fsm_disclosure_results_fsm_guard.csv",
+    "guarded_fsm_disclosure_results_no_guard.csv",
+    "guarded_fsm_disclosure_results_schema_guard.csv",
+    "guarded_fsm_enumeration_results.csv",
+    "guarded_fsm_adversarial_traces.csv",
+    "guarded_fsm_proof_obligations.csv",
+    "guarded_fsm_overhead_results.csv",
+    "artifact/policies/approval_policy.json",
+    "artifact/policies/disclosure_policy.json",
+    "guarded_fsm_artifact_metadata.json",
+    "artifact/EXPECTED_RESULTS.json",
+    "guarded_fsm_artifact_report.md"
+  ]
+}

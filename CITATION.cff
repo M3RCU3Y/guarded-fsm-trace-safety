@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the repository."
+title: "Guarded FSM Trace-Safety Artifact"
+authors:
+  - family-names: Deonarine
+    given-names: Brandon
+affiliation: "Department of Physics and Computer Science, The University of the West Indies, St. Augustine, Trinidad and Tobago"
+date-released: 2026-05-22
+version: "1.0.0"
+license: MIT
+abstract: "A standard-library Python artifact for guarded finite-state mediation of tool-action traces, with reproducible sweeps, adversarial traces, bounded enumeration, and proof-obligation checks."

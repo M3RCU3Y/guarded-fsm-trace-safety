@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="340" viewBox="0 0 920 340" role="img">
+  <rect width="920" height="340" fill="white"/>
+<text x="34.0" y="42.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#172033" text-anchor="start">Disclosure guard</text>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#1f4e79"/></marker><line x1="220.0" y1="185.0" x2="380.0" y2="185.0" stroke="#1f4e79" stroke-width="2.1" marker-end="url(#arrow)"/>
+<text x="300.0" y="175.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f4e79" text-anchor="middle">readPrivate</text>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#1f7a5a"/></marker><line x1="520.0" y1="185.0" x2="680.0" y2="185.0" stroke="#1f7a5a" stroke-width="2.1" marker-end="url(#arrow)"/>
+<text x="600.0" y="175.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f7a5a" text-anchor="middle">redact</text>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#6b5b95"/></marker><line x1="820.0" y1="185.0" x2="380.0" y2="185.0" stroke="#6b5b95" stroke-width="2.1" marker-end="url(#arrow)"/>
+<text x="600.0" y="175.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#6b5b95" text-anchor="middle">readPrivate</text>
+<rect x="80.0" y="155.0" width="140.0" height="60.0" rx="30" fill="white" stroke="#d9e2ec" stroke-width="1.4"/>
+<text x="150.0" y="190.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#172033" text-anchor="middle">Clean</text>
+<rect x="380.0" y="155.0" width="140.0" height="60.0" rx="30" fill="white" stroke="#d9e2ec" stroke-width="1.4"/>
+<text x="450.0" y="190.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#172033" text-anchor="middle">Private</text>
+<rect x="680.0" y="155.0" width="140.0" height="60.0" rx="30" fill="white" stroke="#d9e2ec" stroke-width="1.4"/>
+<text x="750.0" y="190.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#172033" text-anchor="middle">Redacted</text>
+</svg>

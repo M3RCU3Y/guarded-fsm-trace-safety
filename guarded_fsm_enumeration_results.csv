@@ -1,0 +1,43 @@
+policy,depth,controller_id,controller,sequences_checked,unsafe_sequences,unsafe_rate,success_sequences,terminal_sequences,max_trace_len,first_unsafe_sequence
+approval,1,no_guard,No guard,5,1,0.2,0,0,1,execute
+approval,1,schema_guard,Schema guard,5,1,0.2,0,0,1,execute
+approval,1,fsm_guard,Finite-state guard,5,0,0.0,0,0,1,
+approval,2,no_guard,No guard,25,8,0.32,0,1,2,request execute
+approval,2,schema_guard,Schema guard,25,8,0.32,0,1,2,request execute
+approval,2,fsm_guard,Finite-state guard,25,0,0.0,0,1,2,
+approval,3,no_guard,No guard,125,49,0.392,1,13,3,request request execute
+approval,3,schema_guard,Schema guard,125,49,0.392,1,13,3,request request execute
+approval,3,fsm_guard,Finite-state guard,125,0,0.0,1,13,3,
+approval,4,no_guard,No guard,625,272,0.4352,4,113,4,request request request execute
+approval,4,schema_guard,Schema guard,625,272,0.4352,4,113,4,request request request execute
+approval,4,fsm_guard,Finite-state guard,625,0,0.0,16,113,3,
+approval,5,no_guard,No guard,3125,1441,0.46112,10,821,5,request request request request execute
+approval,5,schema_guard,Schema guard,3125,1441,0.46112,10,821,5,request request request request execute
+approval,5,fsm_guard,Finite-state guard,3125,0,0.0,161,821,3,
+approval,6,no_guard,No guard,15625,7448,0.476672,20,5385,6,request request request request request execute
+approval,6,schema_guard,Schema guard,15625,7448,0.476672,20,5385,6,request request request request request execute
+approval,6,fsm_guard,Finite-state guard,15625,0,0.0,1304,5385,3,
+approval,7,no_guard,No guard,78125,37969,0.4860032,35,33069,7,request request request request request request execute
+approval,7,schema_guard,Schema guard,78125,37969,0.4860032,35,33069,7,request request request request request request execute
+approval,7,fsm_guard,Finite-state guard,78125,0,0.0,9297,33069,3,
+approval,8,no_guard,No guard,390625,192032,0.49160192,56,194017,8,request request request request request request request execute
+approval,8,schema_guard,Schema guard,390625,192032,0.49160192,56,194017,8,request request request request request request request execute
+approval,8,fsm_guard,Finite-state guard,390625,0,0.0,60960,194017,3,
+disclosure,1,no_guard,No guard,7,0,0.0,0,0,1,
+disclosure,1,schema_guard,Schema guard,7,0,0.0,0,0,1,
+disclosure,1,fsm_guard,Finite-state guard,7,0,0.0,0,0,1,
+disclosure,2,no_guard,No guard,49,1,0.02040816326530612,0,0,2,readPrivate sendExternal
+disclosure,2,schema_guard,Schema guard,49,1,0.02040816326530612,0,0,2,readPrivate sendExternal
+disclosure,2,fsm_guard,Finite-state guard,49,0,0.0,0,0,2,
+disclosure,3,no_guard,No guard,343,17,0.04956268221574344,1,0,3,readPublic readPrivate sendExternal
+disclosure,3,schema_guard,Schema guard,343,17,0.04956268221574344,1,0,3,readPublic readPrivate sendExternal
+disclosure,3,fsm_guard,Finite-state guard,343,0,0.0,1,0,3,
+disclosure,4,no_guard,No guard,2401,197,0.08204914618908787,10,0,4,readPublic readPublic readPrivate sendExternal
+disclosure,4,schema_guard,Schema guard,2401,197,0.08204914618908787,10,0,4,readPublic readPublic readPrivate sendExternal
+disclosure,4,fsm_guard,Finite-state guard,2401,0,0.0,13,0,4,
+disclosure,5,no_guard,No guard,16807,1939,0.1153685964181591,76,0,5,readPublic readPublic readPublic readPrivate sendExternal
+disclosure,5,schema_guard,Schema guard,16807,1939,0.1153685964181591,76,0,5,readPublic readPublic readPublic readPrivate sendExternal
+disclosure,5,fsm_guard,Finite-state guard,16807,0,0.0,115,0,5,
+disclosure,6,no_guard,No guard,117649,17457,0.14838205169614702,542,0,6,readPublic readPublic readPublic readPublic readPrivate sendExternal
+disclosure,6,schema_guard,Schema guard,117649,17457,0.14838205169614702,542,0,6,readPublic readPublic readPublic readPublic readPrivate sendExternal
+disclosure,6,fsm_guard,Finite-state guard,117649,0,0.0,885,0,6,

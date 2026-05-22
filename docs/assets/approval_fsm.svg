@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="340" viewBox="0 0 920 340" role="img">
+  <rect width="920" height="340" fill="white"/>
+<text x="34.0" y="42.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#172033" text-anchor="start">Approval-gated execution</text>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#1f4e79"/></marker><line x1="190.0" y1="185.0" x2="265.0" y2="185.0" stroke="#1f4e79" stroke-width="2.1" marker-end="url(#arrow)"/>
+<text x="227.5" y="175.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f4e79" text-anchor="middle">request</text>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#1f7a5a"/></marker><line x1="405.0" y1="185.0" x2="490.0" y2="185.0" stroke="#1f7a5a" stroke-width="2.1" marker-end="url(#arrow)"/>
+<text x="447.5" y="175.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f7a5a" text-anchor="middle">approve</text>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#1f4e79"/></marker><line x1="630.0" y1="185.0" x2="710.0" y2="185.0" stroke="#1f4e79" stroke-width="2.1" marker-end="url(#arrow)"/>
+<text x="670.0" y="175.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f4e79" text-anchor="middle">execute</text>
+<rect x="50.0" y="155.0" width="140.0" height="60.0" rx="30" fill="white" stroke="#d9e2ec" stroke-width="1.4"/>
+<text x="120.0" y="190.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#172033" text-anchor="middle">Idle</text>
+<rect x="265.0" y="155.0" width="140.0" height="60.0" rx="30" fill="white" stroke="#d9e2ec" stroke-width="1.4"/>
+<text x="335.0" y="190.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#172033" text-anchor="middle">NeedApproval</text>
+<rect x="490.0" y="155.0" width="140.0" height="60.0" rx="30" fill="white" stroke="#d9e2ec" stroke-width="1.4"/>
+<text x="560.0" y="190.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#172033" text-anchor="middle">CanExecute</text>
+<rect x="710.0" y="155.0" width="140.0" height="60.0" rx="30" fill="white" stroke="#d9e2ec" stroke-width="1.4"/>
+<text x="780.0" y="190.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#172033" text-anchor="middle">Terminal</text>
+</svg>

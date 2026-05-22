@@ -1,0 +1,88 @@
+{
+  "name": "Data-disclosure guard",
+  "identifier": "disclosure",
+  "actions": [
+    "readPublic",
+    "readPrivate",
+    "redact",
+    "sendInternal",
+    "sendExternal",
+    "clear",
+    "malformed"
+  ],
+  "schema_valid": [
+    "clear",
+    "readPrivate",
+    "readPublic",
+    "redact",
+    "sendExternal",
+    "sendInternal"
+  ],
+  "states": [
+    "Clean",
+    "Private",
+    "Redacted"
+  ],
+  "initial_state": "Clean",
+  "terminal_states": [],
+  "allowed": {
+    "Clean": [
+      "clear",
+      "readPrivate",
+      "readPublic",
+      "sendExternal",
+      "sendInternal"
+    ],
+    "Private": [
+      "clear",
+      "readPrivate",
+      "readPublic",
+      "redact",
+      "sendInternal"
+    ],
+    "Redacted": [
+      "clear",
+      "readPrivate",
+      "readPublic",
+      "sendExternal",
+      "sendInternal"
+    ]
+  },
+  "delta": [
+    {
+      "from": "Clean",
+      "action": "readPrivate",
+      "to": "Private"
+    },
+    {
+      "from": "Private",
+      "action": "clear",
+      "to": "Clean"
+    },
+    {
+      "from": "Private",
+      "action": "readPrivate",
+      "to": "Private"
+    },
+    {
+      "from": "Private",
+      "action": "redact",
+      "to": "Redacted"
+    },
+    {
+      "from": "Redacted",
+      "action": "clear",
+      "to": "Clean"
+    },
+    {
+      "from": "Redacted",
+      "action": "readPrivate",
+      "to": "Private"
+    }
+  ],
+  "success_trace": [
+    "readPrivate",
+    "redact",
+    "sendExternal"
+  ]
+}

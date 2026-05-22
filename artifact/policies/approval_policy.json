@@ -1,0 +1,67 @@
+{
+  "name": "Approval-gated execution",
+  "identifier": "approval",
+  "actions": [
+    "request",
+    "approve",
+    "execute",
+    "reject",
+    "malformed"
+  ],
+  "schema_valid": [
+    "approve",
+    "execute",
+    "reject",
+    "request"
+  ],
+  "states": [
+    "Idle",
+    "NeedApproval",
+    "CanExecute",
+    "Terminal"
+  ],
+  "initial_state": "Idle",
+  "terminal_states": [
+    "Terminal"
+  ],
+  "allowed": {
+    "Idle": [
+      "request"
+    ],
+    "NeedApproval": [
+      "approve",
+      "reject"
+    ],
+    "CanExecute": [
+      "execute"
+    ],
+    "Terminal": []
+  },
+  "delta": [
+    {
+      "from": "CanExecute",
+      "action": "execute",
+      "to": "Terminal"
+    },
+    {
+      "from": "Idle",
+      "action": "request",
+      "to": "NeedApproval"
+    },
+    {
+      "from": "NeedApproval",
+      "action": "approve",
+      "to": "CanExecute"
+    },
+    {
+      "from": "NeedApproval",
+      "action": "reject",
+      "to": "Terminal"
+    }
+  ],
+  "success_trace": [
+    "request",
+    "approve",
+    "execute"
+  ]
+}

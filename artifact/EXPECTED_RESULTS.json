@@ -1,0 +1,50 @@
+{
+  "enumeration": {
+    "approval": {
+      "actions": 5,
+      "full_depth": 8,
+      "quick_depth": 4,
+      "full_sequences": 390625,
+      "quick_sequences": 625,
+      "fsm_unsafe_sequences": 0,
+      "no_guard_full_unsafe_sequences": 192032,
+      "schema_guard_full_unsafe_sequences": 192032
+    },
+    "disclosure": {
+      "actions": 7,
+      "full_depth": 6,
+      "quick_depth": 4,
+      "full_sequences": 117649,
+      "quick_sequences": 2401,
+      "fsm_unsafe_sequences": 0,
+      "no_guard_full_unsafe_sequences": 17457,
+      "schema_guard_full_unsafe_sequences": 17457
+    }
+  },
+  "adversarial": [
+    {
+      "policy": "approval",
+      "case": "request-then-execute",
+      "controller_id": "schema_guard",
+      "unsafe": true
+    },
+    {
+      "policy": "approval",
+      "case": "request-then-execute",
+      "controller_id": "fsm_guard",
+      "unsafe": false
+    },
+    {
+      "policy": "disclosure",
+      "case": "private-then-external",
+      "controller_id": "schema_guard",
+      "unsafe": true
+    },
+    {
+      "policy": "disclosure",
+      "case": "private-then-external",
+      "controller_id": "fsm_guard",
+      "unsafe": false
+    }
+  ]
+}

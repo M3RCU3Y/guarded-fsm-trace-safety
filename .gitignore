@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local editor state
+.idea/
+.vscode/
+*.swp
+
+# Build and packaging scratch space
+dist/
+build/
+*.egg-info/
+tmp/
+
+# OS files
+.DS_Store
+Thumbs.db
