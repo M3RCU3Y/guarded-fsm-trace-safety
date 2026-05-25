@@ -64,6 +64,9 @@ The citable pre-submission release for the accompanying Journal of Systems and
 Software manuscript is:
 
 - Release: <https://github.com/M3RCU3Y/guarded-fsm-trace-safety/releases/tag/v1.0.0-pre-submission>
+- Attached journal supplement: `jss_supplementary_artifact.zip`
+- Supplement SHA-256:
+  `acd984345efed0fcf62cbaed81ac8aa66e3451a7b4b674b4a0f7b8ef7cf19c02`
 - Version: `1.0.0-pre-submission`
 - Release date: 2026-05-25
 - Runtime dependencies: Python standard library only
