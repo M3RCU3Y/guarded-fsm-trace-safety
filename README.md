@@ -58,6 +58,23 @@ machine-readable proof-obligation rows.
 Requires Python 3.10 or newer; the continuous-integration workflow tests on
 Python 3.12. No third-party Python packages are required.
 
+## Journal artifact release
+
+The citable pre-submission release for the accompanying Journal of Systems and
+Software manuscript is:
+
+- Release: <https://github.com/M3RCU3Y/guarded-fsm-trace-safety/releases/tag/v1.0.0-pre-submission>
+- Version: `1.0.0-pre-submission`
+- Release date: 2026-05-25
+- Runtime dependencies: Python standard library only
+- Primary reproduction command: `python artifact/run_all.py`
+
+The release is intended to support the manuscript "Finite-State Runtime
+Enforcement for Trace-Safe LLM Tool Use." It includes generated CSV evidence,
+policy JSON files, validation checks, unit tests, proof-obligation rows, and
+the deployment parser-boundary cases cited by the paper. Citation metadata is
+provided in `CITATION.cff`.
+
 ## Quick start
 
 ```bash
