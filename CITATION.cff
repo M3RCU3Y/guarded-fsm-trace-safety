@@ -5,7 +5,7 @@ authors:
   - family-names: Deonarine
     given-names: Brandon
 affiliation: "Department of Physics and Computer Science, The University of the West Indies, St. Augustine, Trinidad and Tobago"
-date-released: 2026-05-22
+date-released: 2026-05-25
 version: "1.0.0-pre-submission"
 license: MIT
 repository-code: "https://github.com/M3RCU3Y/guarded-fsm-trace-safety"
