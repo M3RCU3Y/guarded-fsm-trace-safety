@@ -6,7 +6,8 @@ authors:
     given-names: Brandon
 affiliation: "Department of Physics and Computer Science, The University of the West Indies, St. Augustine, Trinidad and Tobago"
 date-released: 2026-05-22
-version: "1.0.0"
+version: "1.0.0-pre-submission"
 license: MIT
 repository-code: "https://github.com/M3RCU3Y/guarded-fsm-trace-safety"
+repository-artifact: "Versioned public GitHub release: https://github.com/M3RCU3Y/guarded-fsm-trace-safety/releases/tag/v1.0.0-pre-submission; no archival DOI assigned at submission time."
 abstract: "A standard-library Python artifact for accepted-trace runtime enforcement of mediated LLM tool use, with reproducible sweeps, deployment parser-boundary cases, adversarial traces, bounded enumeration, and proof-obligation checks."
