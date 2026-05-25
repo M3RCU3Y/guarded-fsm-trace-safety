@@ -46,5 +46,25 @@
       "controller_id": "fsm_guard",
       "unsafe": false
     }
-  ]
+  ],
+  "parser_cases": {
+    "ci-then-deploy": {
+      "parsed_actions": "ci_passed deploy_prod",
+      "parse_error": "no",
+      "schema_unsafe_emitted": "yes",
+      "fsm_unsafe_emitted": "no"
+    },
+    "prompt-injected-deploy": {
+      "parsed_actions": "malformed deploy_prod",
+      "parse_error": "yes",
+      "schema_unsafe_emitted": "yes",
+      "fsm_unsafe_emitted": "no"
+    },
+    "malformed-json": {
+      "parsed_actions": "malformed",
+      "parse_error": "yes",
+      "schema_unsafe_emitted": "no",
+      "fsm_unsafe_emitted": "no"
+    }
+  }
 }

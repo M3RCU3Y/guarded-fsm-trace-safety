@@ -1,17 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="300" viewBox="0 0 920 300" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="300" viewBox="0 0 920 300" role="img" aria-labelledby="verification-snapshot-title">
+  <title id="verification-snapshot-title">Verification snapshot</title>
   <rect width="920" height="300" fill="white"/>
 <text x="34.0" y="42.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#172033" text-anchor="start">Verification snapshot</text>
-<text x="34.0" y="66.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748b" text-anchor="start">The checks are intentionally small enough to read and rerun.</text>
+<text x="34.0" y="66.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#5f6b7a" text-anchor="start">The checks are intentionally small enough to read and rerun.</text>
 <rect x="44.0" y="112.0" width="248.0" height="118.0" rx="14" fill="white" stroke="#d9e2ec" stroke-width="1.2"/>
-<text x="66.0" y="146.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#64748b" text-anchor="start">Artifact validation</text>
-<text x="66.0" y="182.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="31" font-weight="800" fill="#1f7a5a" text-anchor="start">passed</text>
+<text x="66.0" y="146.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#5f6b7a" text-anchor="start">Artifact validation</text>
+<text x="66.0" y="182.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="31" font-weight="800" fill="#15803d" text-anchor="start">passed</text>
 <text x="66.0" y="210.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#172033" text-anchor="start">expected counts, metadata, split CSVs</text>
 <rect x="336.0" y="112.0" width="248.0" height="118.0" rx="14" fill="white" stroke="#d9e2ec" stroke-width="1.2"/>
-<text x="358.0" y="146.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#64748b" text-anchor="start">Unit tests</text>
-<text x="358.0" y="182.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="31" font-weight="800" fill="#1f7a5a" text-anchor="start">7 passed</text>
+<text x="358.0" y="146.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#5f6b7a" text-anchor="start">Unit tests</text>
+<text x="358.0" y="182.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="31" font-weight="800" fill="#15803d" text-anchor="start">10 passed</text>
 <text x="358.0" y="210.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#172033" text-anchor="start">guard behavior and enumeration checks</text>
 <rect x="628.0" y="112.0" width="248.0" height="118.0" rx="14" fill="white" stroke="#d9e2ec" stroke-width="1.2"/>
-<text x="650.0" y="146.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#64748b" text-anchor="start">FSM unsafe traces</text>
-<text x="650.0" y="182.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="31" font-weight="800" fill="#1f7a5a" text-anchor="start">0</text>
+<text x="650.0" y="146.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#5f6b7a" text-anchor="start">FSM unsafe traces</text>
+<text x="650.0" y="182.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="31" font-weight="800" fill="#15803d" text-anchor="start">0</text>
 <text x="650.0" y="210.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#172033" text-anchor="start">approval depth 8, disclosure depth 6</text>
 </svg>

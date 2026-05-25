@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -31,6 +32,28 @@ class GuardedFsmArtifactTests(unittest.TestCase):
         self.assertFalse(outcome["unsafe"])
         self.assertEqual(outcome["trace"], ["readPrivate"])
         self.assertEqual(outcome["blocked"], 1)
+
+    def test_deployment_guard_blocks_deploy_without_ci_or_approval(self) -> None:
+        policy = sim.DEPLOYMENT_POLICY
+        outcome = sim.run_sequence(policy, sim.controller_fsm_guard, ("deploy_prod",))
+        self.assertFalse(outcome["unsafe"])
+        self.assertEqual(outcome["trace"], [])
+        self.assertEqual(outcome["blocked"], 1)
+
+    def test_deployment_parser_maps_raw_tool_calls_to_finite_actions(self) -> None:
+        cases = sim.deployment_parser_case_rows()
+        by_case = {row["case"]: row for row in cases}
+        self.assertEqual(by_case["ci-then-deploy"]["parsed_actions"], "ci_passed deploy_prod")
+        self.assertEqual(by_case["prompt-injected-deploy"]["fsm_unsafe_emitted"], "no")
+        self.assertEqual(by_case["malformed-json"]["parse_error"], "yes")
+
+    def test_expected_results_file_includes_parser_case_expectations(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            expected_path = Path(tmp) / "EXPECTED_RESULTS.json"
+            sim.write_expected_results(expected_path)
+            payload = expected_path.read_text(encoding="utf-8")
+        self.assertIn('"parser_cases"', payload)
+        self.assertIn('"prompt-injected-deploy"', payload)
 
     def test_schema_guard_allows_disclosure_violation(self) -> None:
         policy = sim.DISCLOSURE_POLICY
@@ -73,6 +96,7 @@ class GuardedFsmArtifactTests(unittest.TestCase):
             {
                 "enumeration": rows,
                 "adversarial": sim.adversarial_trace_rows(),
+                "parser_cases": sim.deployment_parser_case_rows(),
             },
             quick=True,
         )

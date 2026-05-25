@@ -32,3 +32,11 @@ jobs:
 
       - name: Check release folder
         run: python scripts/check_release.py
+
+      - name: Ensure deterministic generated files are committed
+        run: >
+          git diff --exit-code --
+          .
+          ':(exclude)guarded_fsm_artifact_metadata.json'
+          ':(exclude)guarded_fsm_artifact_report.md'
+          ':(exclude)guarded_fsm_overhead_results.csv'

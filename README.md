@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="docs/assets/hero.svg" alt="Guarded finite-state mediation" width="100%">
+  <img src="docs/assets/hero.svg" alt="Trace-safe runtime enforcement artifact" width="100%">
 </p>
 
-# Guarded FSM Trace-Safety Artifact
+# Trace-Safe Runtime Enforcement Artifact
 
 This repository is a small, reproducible artifact for testing a simple idea:
 when a tool-using model proposes actions, a deterministic finite-state guard can
@@ -31,6 +31,7 @@ appears in the wrong state:
 
 - `execute` before `approve`
 - `sendExternal` while private data is still live
+- `deploy.production` before CI and human approval
 - a malformed proposal sent straight through to a tool adapter
 
 Schema validation catches malformed calls. It does not remember history. This
@@ -117,6 +118,20 @@ them again after redaction or clearing.
   <img src="docs/assets/disclosure_unsafe.svg" alt="Disclosure unsafe-rate chart" width="92%">
 </p>
 
+### Deployment parser-boundary case
+
+The deployment case starts from raw JSON-like tool calls and maps them into a
+finite alphabet before mediation:
+
+```text
+open_pr -> ci_passed -> human_approve -> deploy_prod -> rollback
+```
+
+The finite-state guard blocks production deployment unless CI has passed and a
+human approval has been recorded. The generated
+`guarded_fsm_deployment_parser_cases.csv` file includes malformed JSON,
+prompt-injected deployment, and safe rollback examples.
+
 ## Results at a glance
 
 ### Integrated sweep metrics
@@ -160,6 +175,7 @@ small and inspectable.
 The test suite covers:
 
 - direct approval and disclosure guard behavior
+- deployment parser-boundary behavior
 - schema-only baseline failures
 - bounded finite-state enumeration
 - generated proof-obligation rows
@@ -177,6 +193,7 @@ python -m unittest discover -s artifact/tests -p "test_*.py"
 | --- | --- |
 | `guarded_fsm_sim_results.csv` | Approval-policy sweep |
 | `guarded_fsm_disclosure_results.csv` | Disclosure-policy sweep |
+| `guarded_fsm_deployment_parser_cases.csv` | Raw deployment parser-boundary cases |
 | `guarded_fsm_enumeration_results.csv` | Bounded exhaustive enumeration |
 | `guarded_fsm_adversarial_traces.csv` | Minimal adversarial proposal traces |
 | `guarded_fsm_proof_obligations.csv` | State/action proof-obligation rows |

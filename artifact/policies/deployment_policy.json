@@ -1,0 +1,82 @@
+{
+  "name": "Deployment gate",
+  "identifier": "deployment",
+  "actions": [
+    "open_pr",
+    "ci_passed",
+    "human_approve",
+    "deploy_prod",
+    "rollback",
+    "malformed"
+  ],
+  "schema_valid": [
+    "ci_passed",
+    "deploy_prod",
+    "human_approve",
+    "open_pr",
+    "rollback"
+  ],
+  "states": [
+    "Draft",
+    "AwaitingChecks",
+    "AwaitingApproval",
+    "ReadyToDeploy",
+    "Deployed",
+    "RolledBack"
+  ],
+  "initial_state": "Draft",
+  "terminal_states": [
+    "RolledBack"
+  ],
+  "allowed": {
+    "Draft": [
+      "open_pr"
+    ],
+    "AwaitingChecks": [
+      "ci_passed"
+    ],
+    "AwaitingApproval": [
+      "human_approve"
+    ],
+    "ReadyToDeploy": [
+      "deploy_prod"
+    ],
+    "Deployed": [
+      "rollback"
+    ],
+    "RolledBack": []
+  },
+  "delta": [
+    {
+      "from": "AwaitingApproval",
+      "action": "human_approve",
+      "to": "ReadyToDeploy"
+    },
+    {
+      "from": "AwaitingChecks",
+      "action": "ci_passed",
+      "to": "AwaitingApproval"
+    },
+    {
+      "from": "Deployed",
+      "action": "rollback",
+      "to": "RolledBack"
+    },
+    {
+      "from": "Draft",
+      "action": "open_pr",
+      "to": "AwaitingChecks"
+    },
+    {
+      "from": "ReadyToDeploy",
+      "action": "deploy_prod",
+      "to": "Deployed"
+    }
+  ],
+  "success_trace": [
+    "open_pr",
+    "ci_passed",
+    "human_approve",
+    "deploy_prod"
+  ]
+}

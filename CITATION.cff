@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this artifact, please cite the repository."
-title: "Guarded FSM Trace-Safety Artifact"
+title: "Finite-State Runtime Enforcement for Trace-Safe LLM Tool Use Artifact"
 authors:
   - family-names: Deonarine
     given-names: Brandon
@@ -8,4 +8,5 @@ affiliation: "Department of Physics and Computer Science, The University of the 
 date-released: 2026-05-22
 version: "1.0.0"
 license: MIT
-abstract: "A standard-library Python artifact for guarded finite-state mediation of tool-action traces, with reproducible sweeps, adversarial traces, bounded enumeration, and proof-obligation checks."
+repository-code: "https://github.com/M3RCU3Y/guarded-fsm-trace-safety"
+abstract: "A standard-library Python artifact for accepted-trace runtime enforcement of mediated LLM tool use, with reproducible sweeps, deployment parser-boundary cases, adversarial traces, bounded enumeration, and proof-obligation checks."

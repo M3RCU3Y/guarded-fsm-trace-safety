@@ -10,19 +10,20 @@ ASSETS = ROOT / "docs" / "assets"
 
 COLORS = {
     "ink": "#172033",
-    "muted": "#64748b",
+    "muted": "#5f6b7a",
     "rule": "#d9e2ec",
-    "panel": "#f8fafc",
+    "panel": "#f7f8fa",
     "blue": "#1f4e79",
-    "green": "#1f7a5a",
-    "red": "#8a3d2e",
+    "schema": "#2563eb",
+    "green": "#15803d",
+    "red": "#c2410c",
     "purple": "#6b5b95",
     "gold": "#b7791f",
 }
 
 CONTROLLER_COLORS = {
     "No guard": COLORS["red"],
-    "Schema guard": COLORS["purple"],
+    "Schema guard": COLORS["schema"],
     "Finite-state guard": COLORS["green"],
 }
 
@@ -31,9 +32,12 @@ def esc(text: object) -> str:
     return html.escape(str(text), quote=True)
 
 
-def write_svg(name: str, body: str, width: int, height: int) -> None:
+def write_svg(name: str, body: str, width: int, height: int, title: str | None = None) -> None:
     ASSETS.mkdir(parents=True, exist_ok=True)
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img">
+    title_text = title or Path(name).stem.replace("_", " ").title()
+    title_id = f"{Path(name).stem.replace('_', '-')}-title"
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="{title_id}">
+  <title id="{title_id}">{esc(title_text)}</title>
   <rect width="{width}" height="{height}" fill="white"/>
 {body}
 </svg>
@@ -123,7 +127,7 @@ def line_chart(name: str, title: str, subtitle: str, rows: list[dict[str, str]],
         parts.append(line(legend_x + 16, y - 4, legend_x + 44, y - 4, CONTROLLER_COLORS[controller], 2.5))
         parts.append(text(legend_x + 54, y, controller, 12, COLORS["ink"]))
 
-    write_svg(name, "\n".join(parts), width, height)
+    write_svg(name, "\n".join(parts), width, height, title)
 
 
 def architecture() -> None:
@@ -148,7 +152,7 @@ def architecture() -> None:
     parts.append(line(530, 214, 530, 266, COLORS["red"], 2, "5 4"))
     parts.append(rounded_rect(416, 264, 228, 42, "#fff7f5", "#f0c7bd", 9))
     parts.append(text(530, 290, "rejected proposals are suppressed", 13, COLORS["red"], "600", "middle"))
-    write_svg("architecture.svg", "\n".join(parts), width, height)
+    write_svg("architecture.svg", "\n".join(parts), width, height, "Runtime boundary architecture")
 
 
 def fsm_diagram(name: str, title: str, nodes: list[tuple[str, float, float]], edges: list[tuple[str, str, str, str]]) -> None:
@@ -163,7 +167,7 @@ def fsm_diagram(name: str, title: str, nodes: list[tuple[str, float, float]], ed
     for label, x, y in nodes:
         parts.append(rounded_rect(x - 70, y - 30, 140, 60, "white", COLORS["rule"], 30, 1.4))
         parts.append(text(x, y + 5, label, 14, COLORS["ink"], "700", "middle"))
-    write_svg(name, "\n".join(parts), width, height)
+    write_svg(name, "\n".join(parts), width, height, title)
 
 
 def enumeration_summary() -> None:
@@ -195,14 +199,14 @@ def enumeration_summary() -> None:
         else:
             parts.append(rounded_rect(300, y, 10, bar_h, COLORS["green"], COLORS["green"], 6))
         parts.append(text(792, y + 18, f"{unsafe:,}", 13, COLORS["ink"], "700"))
-    write_svg("enumeration_summary.svg", "\n".join(parts), width, height)
+    write_svg("enumeration_summary.svg", "\n".join(parts), width, height, "Bounded exhaustive enumeration")
 
 
 def test_matrix() -> None:
     width, height = 920, 300
     cards = [
         ("Artifact validation", "passed", "expected counts, metadata, split CSVs"),
-        ("Unit tests", "7 passed", "guard behavior and enumeration checks"),
+        ("Unit tests", "10 passed", "guard behavior and enumeration checks"),
         ("FSM unsafe traces", "0", "approval depth 8, disclosure depth 6"),
     ]
     parts = [
@@ -215,7 +219,7 @@ def test_matrix() -> None:
         parts.append(text(x + 22, 146, title, 14, COLORS["muted"], "600"))
         parts.append(text(x + 22, 182, value, 31, COLORS["green"], "800"))
         parts.append(text(x + 22, 210, sub, 12, COLORS["ink"]))
-    write_svg("verification_snapshot.svg", "\n".join(parts), width, height)
+    write_svg("verification_snapshot.svg", "\n".join(parts), width, height, "Verification snapshot")
 
 
 def hero() -> None:
@@ -223,7 +227,7 @@ def hero() -> None:
     parts = [
         '<defs><linearGradient id="hero" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#102a43"/><stop offset="55%" stop-color="#1f4e79"/><stop offset="100%" stop-color="#1f7a5a"/></linearGradient></defs>',
         f'<rect width="{width}" height="{height}" rx="22" fill="url(#hero)"/>',
-        text(54, 82, "Guarded finite-state mediation", 36, "white", "800"),
+        text(54, 82, "Trace-safe runtime enforcement", 36, "white", "800"),
         text(56, 120, "A small runtime boundary for trace-safe tool actions", 18, "#dbeafe", "500"),
         '<rect x="58" y="172" width="216" height="56" rx="14" fill="#ffffff" fill-opacity="0.10" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1"/>',
         text(86, 207, "0 unsafe FSM traces", 18, "white", "800"),
@@ -232,7 +236,7 @@ def hero() -> None:
         '<rect x="550" y="172" width="248" height="56" rx="14" fill="#ffffff" fill-opacity="0.10" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1"/>',
         text(578, 207, "reproducible checks", 18, "white", "800"),
     ]
-    write_svg("hero.svg", "\n".join(parts), width, height)
+    write_svg("hero.svg", "\n".join(parts), width, height, "Trace-safe runtime enforcement artifact")
 
 
 def main() -> None:

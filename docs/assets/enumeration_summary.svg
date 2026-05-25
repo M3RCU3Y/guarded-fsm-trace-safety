@@ -1,29 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="380" viewBox="0 0 920 380" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="380" viewBox="0 0 920 380" role="img" aria-labelledby="enumeration-summary-title">
+  <title id="enumeration-summary-title">Bounded exhaustive enumeration</title>
   <rect width="920" height="380" fill="white"/>
 <text x="34.0" y="42.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#172033" text-anchor="start">Bounded exhaustive enumeration</text>
-<text x="34.0" y="66.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748b" text-anchor="start">Unsafe accepted traces found across every proposal sequence up to the reported depth.</text>
+<text x="34.0" y="66.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="400" fill="#5f6b7a" text-anchor="start">Unsafe accepted traces found across every proposal sequence up to the reported depth.</text>
 <text x="84.0" y="124.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#172033" text-anchor="start">approval / Finite-state guard</text>
 <rect x="300.0" y="106.0" width="470.0" height="26.0" rx="6" fill="#eef3f8" stroke="#e5edf5" stroke-width="1.0"/>
-<rect x="300.0" y="106.0" width="10.0" height="26.0" rx="6" fill="#1f7a5a" stroke="#1f7a5a" stroke-width="1.0"/>
+<rect x="300.0" y="106.0" width="10.0" height="26.0" rx="6" fill="#15803d" stroke="#15803d" stroke-width="1.0"/>
 <text x="792.0" y="124.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#172033" text-anchor="start">0</text>
 <text x="84.0" y="166.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#172033" text-anchor="start">approval / No guard</text>
 <rect x="300.0" y="148.0" width="470.0" height="26.0" rx="6" fill="#eef3f8" stroke="#e5edf5" stroke-width="1.0"/>
-<rect x="300.0" y="148.0" width="470.0" height="26.0" rx="6" fill="#8a3d2e" stroke="#8a3d2e" stroke-width="1.0"/>
+<rect x="300.0" y="148.0" width="470.0" height="26.0" rx="6" fill="#c2410c" stroke="#c2410c" stroke-width="1.0"/>
 <text x="792.0" y="166.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#172033" text-anchor="start">192,032</text>
 <text x="84.0" y="208.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#172033" text-anchor="start">approval / Schema guard</text>
 <rect x="300.0" y="190.0" width="470.0" height="26.0" rx="6" fill="#eef3f8" stroke="#e5edf5" stroke-width="1.0"/>
-<rect x="300.0" y="190.0" width="470.0" height="26.0" rx="6" fill="#6b5b95" stroke="#6b5b95" stroke-width="1.0"/>
+<rect x="300.0" y="190.0" width="470.0" height="26.0" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1.0"/>
 <text x="792.0" y="208.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#172033" text-anchor="start">192,032</text>
 <text x="84.0" y="250.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#172033" text-anchor="start">disclosure / Finite-state guard</text>
 <rect x="300.0" y="232.0" width="470.0" height="26.0" rx="6" fill="#eef3f8" stroke="#e5edf5" stroke-width="1.0"/>
-<rect x="300.0" y="232.0" width="10.0" height="26.0" rx="6" fill="#1f7a5a" stroke="#1f7a5a" stroke-width="1.0"/>
+<rect x="300.0" y="232.0" width="10.0" height="26.0" rx="6" fill="#15803d" stroke="#15803d" stroke-width="1.0"/>
 <text x="792.0" y="250.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#172033" text-anchor="start">0</text>
 <text x="84.0" y="292.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#172033" text-anchor="start">disclosure / No guard</text>
 <rect x="300.0" y="274.0" width="470.0" height="26.0" rx="6" fill="#eef3f8" stroke="#e5edf5" stroke-width="1.0"/>
-<rect x="300.0" y="274.0" width="42.7" height="26.0" rx="6" fill="#8a3d2e" stroke="#8a3d2e" stroke-width="1.0"/>
+<rect x="300.0" y="274.0" width="42.7" height="26.0" rx="6" fill="#c2410c" stroke="#c2410c" stroke-width="1.0"/>
 <text x="792.0" y="292.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#172033" text-anchor="start">17,457</text>
 <text x="84.0" y="334.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" fill="#172033" text-anchor="start">disclosure / Schema guard</text>
 <rect x="300.0" y="316.0" width="470.0" height="26.0" rx="6" fill="#eef3f8" stroke="#e5edf5" stroke-width="1.0"/>
-<rect x="300.0" y="316.0" width="42.7" height="26.0" rx="6" fill="#6b5b95" stroke="#6b5b95" stroke-width="1.0"/>
+<rect x="300.0" y="316.0" width="42.7" height="26.0" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1.0"/>
 <text x="792.0" y="334.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#172033" text-anchor="start">17,457</text>
 </svg>
